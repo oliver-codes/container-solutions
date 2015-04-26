@@ -22,3 +22,5 @@ ADD Gemfile* $APP_HOME/
 RUN bundle install
 
 ADD . $APP_HOME
+
+CMD rails server --port 3000 --binding 0.0.0.0
