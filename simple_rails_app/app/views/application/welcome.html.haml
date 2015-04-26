@@ -1,0 +1,13 @@
+- if current_user
+  %h3.first Nice, you're logged in!
+
+  %p.last= link_to('Logout', destroy_user_session_path, :method => :delete)
+
+- else
+  %h4.first Please log in or create an account
+  %p
+    %a.btn.btn-sm.btn-primary{:href => "/users/sign_in"} Log in
+
+  %p.last
+    %a.btn.btn-sm.btn-default{:href => "/users/sign_up"} Create an account
+  = yield

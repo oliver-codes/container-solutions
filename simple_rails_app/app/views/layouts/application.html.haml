@@ -22,26 +22,24 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.navbar-brand{:href => "#"} Simple App for Container Solutions
+          %a.navbar-brand{:href => "/"} Simple App for Container Solutions
         #navbar.collapse.navbar-collapse.pull-right
           %ul.nav.navbar-nav
             %li
-              %a{:href => "#"} You are not logged in
-        / /.nav-collapse
+              - if current_user
+                %a{:href => "#"} Welcome #{current_user.email}
+              - else
+                %a{:href => "/users/sign_in"} You are not logged in
+
     .container
       .row
         .col-md-4
           %h3.first This is a simple app
           %p.lead You can create an account and log in and thats just about it.
           %p.lead Enjoy!
+          %p This request was served from <code>web_1</code>
 
         .col-md-8
 
           .well.align-against-h3
-            %h4.first Please log in or create an account
-            %p
-              %a.btn.btn-sm.btn-primary{:href => "#"} Log in
-
-            %p.last
-              %a.btn.btn-sm.btn-default{:href => "#"} Create an account
             = yield
