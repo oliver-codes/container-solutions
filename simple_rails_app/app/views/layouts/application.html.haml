@@ -41,7 +41,7 @@
           %h3.first This is a simple app
           %p.lead You can create an account and log in and thats just about it.
           %p.lead Enjoy!
-          %p This request was served from <code>port: #{Rails::Server.new.options[:Port]}</code>
+          %p This request was served from host: <code>#{Socket.gethostname}</code>
 
         .col-md-8
 

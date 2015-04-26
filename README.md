@@ -3,10 +3,10 @@ Container Solutions Assignment
 
 ### Goals / step plan
 
-- [ ] Make a simple_rails_app with a login screen
-- [ ] Give it a Dockerfile make sure it builds and that people can log in
-- [ ] Using docker_compose to scale the rails app up to 3 containers
-- [ ] Make sure SSO works.
+- [X] Make a simple_rails_app with a login screen
+- [X] Give it a Dockerfile make sure it builds and that people can log in
+- [X] Using docker_compose to scale the rails app up to 3 containers
+- [X] Make sure SSO works.
 - [ ] Add a frontend loadbalancer so I can demo without port number switching
 
 **Stretch goals**
@@ -21,6 +21,8 @@ Things I read and used while working on this assignment:
 * https://robots.thoughtbot.com/rails-on-docker
 * http://ilikestuffblog.com/2014/01/06/how-to-skip-bundle-install-when-deploying-a-rails-app-to-docker/
 * http://www.centurylinklabs.com/auto-loadbalancing-with-fig-haproxy-and-serf/
+* http://stackoverflow.com/questions/21783016/how-does-rails-devise-handle-cookie-sessions
+* http://stackoverflow.com/questions/21491464/sessions-made-sense-to-me-before-i-started-reading-about-them-online/21491657#21491657
 
 ### Technologies chosen and reasoning
 
