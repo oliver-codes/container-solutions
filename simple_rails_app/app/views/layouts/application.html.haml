@@ -25,10 +25,14 @@
           %a.navbar-brand{:href => "/"} Simple App for Container Solutions
         #navbar.collapse.navbar-collapse.pull-right
           %ul.nav.navbar-nav
-            %li
-              - if current_user
+            - if current_user
+              %li
                 %a{:href => "#"} Welcome #{current_user.email}
-              - else
+              %li
+                = link_to('Logout', destroy_user_session_path, :method => :delete)
+
+            - else
+              %li
                 %a{:href => "/users/sign_in"} You are not logged in
 
     .container
@@ -37,7 +41,7 @@
           %h3.first This is a simple app
           %p.lead You can create an account and log in and thats just about it.
           %p.lead Enjoy!
-          %p This request was served from <code>web_1</code>
+          %p This request was served from <code>port: #{Rails::Server.new.options[:Port]}</code>
 
         .col-md-8
 
