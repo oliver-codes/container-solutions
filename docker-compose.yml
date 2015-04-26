@@ -5,8 +5,17 @@ db:
 
 backend:
   build: ./simple_rails_app
-  ports:
-    - "3000"
   links:
     - db
+  ports:
+    - '3000'
+  volumes:
+    - ./simple_rails_app:/myapp
+
+frontend:
+  image: tutum/hipache
+  ports:
+    - "80:80"
+    - "6379:6379"
+
 
