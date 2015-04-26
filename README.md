@@ -5,8 +5,8 @@ Container Solutions Assignment
 
 - [ ] Make a simple_rails_app with a login screen
 - [ ] Give it a Dockerfile make sure it builds and that people can log in
-- [ ] Using docker_compose scale the rails app up to 3 containers
-- [ ] Make SSO work
+- [ ] Using docker_compose to scale the rails app up to 3 containers
+- [ ] Make sure SSO works.
 - [ ] Add a frontend loadbalancer so I can demo without port number switching
 
 **Stretch goals**
