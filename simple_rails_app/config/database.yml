@@ -4,22 +4,23 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
-default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
 
-development:
-  <<: *default
-  database: db/development.sqlite3
+development: &default
+  adapter: postgresql
+  database: backbone_data_bootstrap_development
+  min_messages: WARNING
+  pool: 5
+  username: postgres
+  host: <%= ENV['CONTAINERSOLUTIONSASSIGNMENT_DB_1_PORT_5432_TCP_ADDR'] %>
+  port: <%= ENV['CONTAINERSOLUTIONSASSIGNMENT_DB_1_PORT_5432_TCP_PORT'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: backbone_data_bootstrap_test
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: backbone_data_bootstrap_production

@@ -1,13 +1,12 @@
-# db:
-#   image: postgres:9.4.1
-#   ports:
-#     - "5432:5432"
+db:
+  image: postgres:9.4.1
+  ports:
+    - "5432:5432"
 
-web:
+backend:
   build: ./simple_rails_app
   ports:
     - "3000"
-  # links:
-  #   - db
-  volumes:
-    - ./simple_rails_app:/myapp
+  links:
+    - db
+
