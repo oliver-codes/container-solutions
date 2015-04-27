@@ -14,6 +14,9 @@ RUN apt-get install -y libqt4-webkit libqt4-dev xvfb
 # for a JS runtime
 RUN apt-get install -y nodejs
 
+# for redis-cli
+RUN apt-get install -y redis-tools
+
 ENV APP_HOME /myapp
 RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
@@ -23,4 +26,4 @@ RUN bundle install
 
 ADD . $APP_HOME
 
-CMD rails server --port 3000 --binding 0.0.0.0 -P /dev/null
+CMD ["./run.sh"]

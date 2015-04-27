@@ -20,10 +20,18 @@
 body {
   padding-top: 100px;
   font-family: 'Roboto', sans-serif;
+  background-color: #f8f8f8;
+}
+
+.well {
+  background-color: #fff;
+  border: 1px solid #e9e9e9;
+  box-shadow: none;
 }
 
 .navbar-fixed-top {
-  background-color: #F4F4F4;
+  background-color: #fff;
+  border-bottom: 1px solid #F0f0f0;
 }
 
 .container {

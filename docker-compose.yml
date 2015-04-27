@@ -3,19 +3,23 @@ db:
   ports:
     - "5432:5432"
 
+frontend:
+  image: tutum/hipache
+  environment:
+    - SERVER_TCPTIMEOUT=1
+    - SERVER_DEADBACKENDON500=true
+  ports:
+    - "80:80"
+    - "6379:6379"
+
 backend:
   build: ./simple_rails_app
   links:
     - db
+    - frontend
   ports:
     - '3000'
-  volumes:
-    - ./simple_rails_app:/myapp
 
-frontend:
-  image: tutum/hipache
-  ports:
-    - "80:80"
-    - "6379:6379"
+
 
 
