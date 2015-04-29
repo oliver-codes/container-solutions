@@ -3,8 +3,8 @@ Container Solutions Assignment
 
 ### How to run / evaluate:
 
-    If you'd like to see it running quickly, this project is running
-    on digital ocean here: http://simpleapp.oliver.codes/
+    If you'd like to see it quickly, this project is running
+    on digital ocean: http://simpleapp.oliver.codes/
 
 1. Install docker and docker-compose: http://docs.docker.com/compose/install/
 
@@ -13,7 +13,7 @@ host's IP or a domain that resolves to that IP:
 
 3. Then inside this directory run:
 
-        docker-compose build   # this could a while take 10-15 minutes
+        docker-compose build   # this could take a while the first time. 15+ minutes
         docker-compose up -d
         docker-compose scale backend=3
 
