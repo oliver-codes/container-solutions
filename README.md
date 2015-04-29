@@ -1,13 +1,41 @@
 Container Solutions Assignment
 ------------------------------
 
+### How to run / evaluate:
+
+    If you'd like to see it running quickly, this is running project is running
+    on digital ocean here: http://simpleapp.oliver.codes/
+
+1. Install docker and docker-compose: http://docs.docker.com/compose/install/
+
+2. Edit docker-compose.yml and set the DOMAIN environment variable to your docker
+host's IP or a domain that resolves to that IP:
+
+3. Then inside this directory run:
+
+        docker-compose build   # this could a while take 10-15 minutes
+        docker-compose up -d
+        docker-compose scale backend=3
+
+You will now have:
+  * 3 containers running a simple rails application
+  * 1 container running hipache & redis
+  * 1 container running postgres
+
+Try creating an account and logging in. You'll notice that the backend identifier
+at the top right is changing. Refresh a few times to see it switch between the
+backends. Even though the page is being served from different backends, you are
+still logged in.
+
+This works because the session is stored in an encrypted cookie.
+
 ### Goals / step plan
 
 - [X] Make a simple_rails_app with a login screen
 - [X] Give it a Dockerfile make sure it builds and that people can log in
 - [X] Using docker_compose to scale the rails app up to 3 containers
 - [X] Make sure SSO works.
-- [ ] Add a frontend loadbalancer so I can demo without port number switching
+- [X] Add a frontend loadbalancer so I can demo without port number switching
 
 **Stretch goals**
 
@@ -44,15 +72,17 @@ Things I read and used while working on this assignment:
 
 * **redis:**
 
-  Fast, easy to set up, also have some experience with this so seemed like a good
-  choice as a session sharing backend
+  ~~Fast, easy to set up, also have some experience with this so seemed like a good
+  choice as a session sharing backend~~
+
+  Didn't need any session sharing in the end, relied on Rail's storing the
+  session in a cookie.
 
 * **hipache:**
 
   I needed a frontend if I'm going to have multiple containers serving one app.
   I wanted the demo to work seemlessly, and not have to show that SSO works by
   switching between url's with different port numbers.
-  Hipache seemed like a natural choice since I also already have redis in my stack
 
 * **Not CoreOS or Kubernetes:**
 
