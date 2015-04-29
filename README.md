@@ -41,6 +41,7 @@ This works because the session is stored in an encrypted cookie.
 
 - [ ] Add a totally different containerized rails app (discourse)
 - [ ] Make SSO work in that case too
+- [ ] Write a blog post
 
 ### Research / Resources used:
 
