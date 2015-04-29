@@ -3,7 +3,7 @@ Container Solutions Assignment
 
 ### How to run / evaluate:
 
-    If you'd like to see it running quickly, this is running project is running
+    If you'd like to see it running quickly, this project is running
     on digital ocean here: http://simpleapp.oliver.codes/
 
 1. Install docker and docker-compose: http://docs.docker.com/compose/install/
