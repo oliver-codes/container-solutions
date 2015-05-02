@@ -2,7 +2,7 @@
 git pull
 docker-compose build
 
-if docker-compose ps | grep -q containersolutionsassignment_backendA
+if docker-compose ps | grep -q containersolutionsassignment_backenda
 then
 docker-compose scale backendb=3
 docker-compose scale backenda=0
