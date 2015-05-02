@@ -2,5 +2,5 @@
 
 docker-compose build
 docker-compose up -d
-docker-compose scale backendA=3
-docker-compose scale backendB=0
+docker-compose scale backenda=3
+docker-compose scale backendb=0
