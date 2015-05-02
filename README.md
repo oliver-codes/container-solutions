@@ -52,6 +52,7 @@ Things I read and used while working on this assignment:
 * http://stackoverflow.com/questions/21783016/how-does-rails-devise-handle-cookie-sessions
 * http://stackoverflow.com/questions/21491464/sessions-made-sense-to-me-before-i-started-reading-about-them-online/21491657#21491657
 * https://github.com/Turistforeningen/hipache
+* http://martinfowler.com/bliki/BlueGreenDeployment.html
 
 ### Technologies chosen and reasoning
 

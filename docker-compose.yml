@@ -12,7 +12,7 @@ frontend:
     - "80:80"
     - "6379:6379"
 
-backend:
+backend_a:
   build: ./simple_rails_app
   environment:
     - DOMAIN=docker.dev
@@ -22,6 +22,15 @@ backend:
   ports:
     - '3000'
 
+backend_b:
+  build: ./simple_rails_app
+  environment:
+    - DOMAIN=docker.dev
+  links:
+    - db
+    - frontend
+  ports:
+    - '3000'
 
 
 
